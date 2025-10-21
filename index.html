@@ -1,0 +1,39 @@
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Autenticação • Seu App</title>
+<link rel="stylesheet" href="/css/styles.css" />
+<script src="app"></script>
+</head>
+<body>
+<main class="wrap">
+
+<section id="criar" class="auth">
+<header class="auth__head">
+<p class="kicker">Seja bem-vindo!</p>
+<h1 class="auth__title">Crie uma conta</h1>
+</header>
+
+<form class="form" autocomplete="on">
+<div class="group">
+<label for="signup-email">Email</label>
+<input id="signup-email" type="email" placeholder="voce@exemplo.com" required autocomplete="email" />
+</div>
+
+<div class="group">
+<label for="signup-nome">Nome</label>
+<input id="signup-nome" type="text" placeholder="Seu nome" required autocomplete="name" />
+</div>
+
+<div class="group">
+<label for="signup-senha">Senha</label>
+<input id="signup-senha" type="password" placeholder="Mínimo de 8 caracteres" required autocomplete="new-password" />
+</div>
+
+<button class="btn btn--primary" type="submit"><a href="login.html">Criar</a></button>
+<p class="swap">Já tem uma conta? <a class="link" href="login.html">Entrar</a></p>
+</form>
+</section>
+
+</html>

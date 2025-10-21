@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Editar Tarefa</title>
+  <link rel="stylesheet" href="/css/edit.css" />
+  <link rel="stylesheet" href="/css/newtasks.css">
+  <script defer src="/js/edit.js"></script>
+  <script src="/js/newtasks.js"></script>
+</head>
+
+<body>
+  <main class="wrap">
+    <section class="editor-card">
+      <header class="editor-head">
+        <a class="icon-btn" href="mytasks.html" aria-label="Cancelar">✕</a>
+        <h1 id="task-title" class="editor-title">Título</h1>
+      </header>
+
+      <form id="edit-form" class="editor-form">
+        <label class="lbl" for="title-input">Título</label>
+        <input id="title-input" class="inp" type="text" required />
+
+        <label class="lbl" for="desc">Descrição</label>
+        <textarea id="desc" class="inp" rows="4" placeholder="Detalhes da tarefa"></textarea>
+
+        <label class="lbl" for="date">Para:</label>
+        <input id="date" class="inp" type="date" />
+
+      <div class="field">
+        <label class="lbl" for="desc">Descrição</label>
+        <div class="prioridade">
+          <button type="button" data-level="1" class="nivel nivel-1">Nível 1</button>
+          <button type="button" data-level="2" class="nivel nivel-2">Nível 2</button>
+          <button type="button" data-level="3" class="nivel nivel-3">Nível 3</button>
+        </div>
+      </div>
+
+        <div class="actions">
+          <button class="btn btn--save" type="submit">Salvar</button>
+          <a class="btn btn--ghost" href="mytasks.html">Cancelar</a>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Autenticação • Seu App</title>
+<link rel="stylesheet" href="/css/styles.css" />
+
+</head>
+<body>
+<main class="wrap">
+
+<section id="entrar" class="auth">
+<header class="auth__head">
+<p class="kicker">Bem vindo de volta!</p>
+<h2 class="auth__title">Entrar</h2>
+</header>
+
+<form class="form" autocomplete="on">
+<div class="group">
+<label for="login-email">Email</label>
+<input id="login-email" type="email" placeholder="voce@exemplo.com" required autocomplete="email" />
+</div>
+
+<div class="group">
+<label for="login-senha">Senha</label>
+<input id="login-senha" type="password" placeholder="••••••••" required autocomplete="current-password" />
+</div>
+
+<p class="swap"><a class="link" href="#reset">Esqueceu sua senha?</a></p>
+<p class="swap">Não tem uma conta? <a class="link" href="index.html">Criar Conta</a></p>
+</form>
+
+<form id="login-form" class="form" autocomplete="on">
+  <!-- seus campos -->
+  <button class="btn btn--primary" type="submit">Entrar</button>
+</form>
+
+</section>
+
+<script>
+  document.getElementById('login-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // impede envio real
+    window.location.href = 'mytasks.html'; // muda de página
+  });
+</script>
+
+</body>
+</html>

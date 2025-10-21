@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard - Minhas Tarefas</title>
+  <link rel="stylesheet" href="/css/dash.css" />
+  <script defer src="/js/dash.js"></script>
+</head>
+
+<body>
+  <main class="wrap">
+    <!-- Section com formato 16:9 -->
+    <section class="editor-section">
+      <div class="editor-card">
+        <header class="editor-head">
+          <a class="icon-btn" href="mytasks.html" aria-label="Cancelar">✕</a>
+          <h1 id="task-title" class="editor-title">Dashboard</h1>
+        </header>
+
+        <div class="dash">
+          <!-- Card 1: Anotações marcadas como concluídas -->
+          <div class="card">
+            <h3 class="card-title">Anotações Concluídas</h3>
+            <div class="card-value">
+              <span id="completed-percentage">30%</span>
+              <div class="progress-bar">
+                <div id="completed-progress" class="progress" style="width: 30%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Quantidade de anotações feitas no mês -->
+          <div class="card">
+            <h3 class="card-title">Anotações Feitas no Mês</h3>
+            <p id="monthly-count" class="card-value">45</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

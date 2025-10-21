@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Minhas Tarefas</title>
+    <link rel="stylesheet" href="/css/mytasks.css" />
+    <script defer src="/js/mytasks.js"></script>
+</head>
+
+<body>
+    <main class="wrap">
+        <section class="tasks">
+
+            <header class="tasks__head">
+                <h1>Minhas Tarefas</h1>
+                <!-- Ícone de Dashboard com link -->
+                <a href="dash.html" class="icon-link">
+                    <img src="imgs/dashboard.png" alt="Dashboard" class="icon" />
+                </a>
+            </header>
+            <div class="tabs">
+                <label><input type="radio" name="filter" value="all" checked /> Todas</label>
+                <label><input type="radio" name="filter" value="pending" /> Pendente</label>
+                <label><input type="radio" name="filter" value="done" /> Concluídas</label>
+            </div>
+
+            <div class="list">
+                <h2 class="badge badge--blue">Pendente</h2>
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" />
+                            <span class="task-text">Sacar o pino do coquilho traseiro</span>
+                        </label>
+                    </li>
+                </ul>
+
+                <h2 class="badge badge--green">Concluídas</h2>
+                <ul class="done">
+                    <li>
+                        <label>
+                            <input type="checkbox" checked />
+                            <span class="task-text">Dar migalha pros pombos</span>
+                        </label>
+                    </li>
+            </div>
+
+            <a href="newtasks.html" class="center-btn">
+                <img src="imgs/add.png" alt="Botão" />
+            </a>
+        </section>
+
+    </main>
+</body>
+
+</html>

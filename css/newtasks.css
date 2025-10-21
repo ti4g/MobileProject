@@ -1,0 +1,116 @@
+
+:root {
+  --bg: #EEF3F7;
+  --card: #fff;
+  --text: #2B3340;
+  --muted: #7C8798;
+  --stroke: #B8C5D3;
+  --primary: #6C63FF;
+  --green: #10B981;
+  --red: #EF4444;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.task-form {
+  width: min(92vw, 380px);
+  background: var(--card);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 18px rgba(0,0,0,.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-form__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-title {
+  flex: 1;
+  font-size: 18px;
+  border: none;
+  border-bottom: 2px solid var(--stroke);
+  padding: 6px;
+}
+.task-title:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.close-btn {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+textarea {
+  resize: none;
+  padding: 8px;
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  min-height: 80px;
+}
+
+.prioridade {
+  display: flex;
+  gap: 10px;
+}
+.nivel {
+  border-radius: 999px;
+  padding: 6px 12px;
+  background: #f9fafb;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.nivel-1 { border: 2px solid #F87171; color: #F87171; }
+.nivel-2 { border: 2px solid #FBBF24; color: #FBBF24; }
+.nivel-3 { border: 2px solid #34D399; color: #34D399; }
+
+.nivel.ativo.nivel-1 { background: #F87171; color: white; }
+.nivel.ativo.nivel-2 { background: #FBBF24; color: white; }
+.nivel.ativo.nivel-3 { background: #34D399; color: white; }
+
+
+.task-form__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.delete-btn, .save-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+}
+
+.delete-btn { background: var(--red); }
+.save-btn { background: var(--green); }
+

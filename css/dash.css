@@ -1,0 +1,148 @@
+:root {
+  --bg: #eef3f7;
+  --card: #fff;
+  --text: #2b3340;
+  --muted: #7c8798;
+  --primary: #6c63ff;
+  --green: #10b981;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/* Seção com formato 16:9 */
+.editor-section {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Card do formulário */
+.editor-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  background: var(--card);
+}
+
+.editor-head {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-bottom: .75rem;
+}
+
+.icon-btn {
+  margin-right: auto;
+  border: 0;
+  background: #f1f5f9;
+  color: #334155;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: .6rem;
+  cursor: pointer;
+}
+
+.editor-title {
+  margin: 0 auto 0 0;
+  font-weight: 800;
+  font-size: 1.35rem;
+}
+
+/* Cards do Dashboard (ajustando para ficarem em coluna) */
+.dash {
+  display: flex;
+  flex-direction: column;  /* Cards em coluna */
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+.progress {
+  height: 100%;
+  background-color: var(--green);
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .wrap {
+    padding: 16px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .card-value {
+    font-size: 1.5rem;
+  }
+}
